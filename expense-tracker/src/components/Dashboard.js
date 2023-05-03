@@ -5,9 +5,9 @@ function Dashboard() {
   const [accountBalance, setAccountBalance] = useState(1000);
 
   return (
-    <div>
+    <div >
       <h1>Dashboard</h1>
-      <p>Account Balance: {accountBalance}</p>
+      <p className="dashboard-container">Account Balance: {accountBalance}</p>
       
     </div>
   );

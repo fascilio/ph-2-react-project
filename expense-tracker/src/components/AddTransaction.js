@@ -4,6 +4,7 @@ function AddTransaction(props) {
   const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
   const [amount, setAmount] = useState("");
+  const [date, setDate] = useState("");
 
   const handleDescriptionChange = (event) => {
     setDescription(event.target.value);
@@ -17,6 +18,10 @@ function AddTransaction(props) {
     setAmount(event.target.value);
   };
 
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -24,11 +29,13 @@ function AddTransaction(props) {
         description,
         category,
         amount,
+        date,
       };
       await props.addTransaction(transaction);
       setDescription("");
       setCategory("");
       setAmount("");
+      setDate("");
     } catch (error) {
       console.error(error);
     }
@@ -62,9 +69,18 @@ function AddTransaction(props) {
             onChange={handleAmountChange}
         />
         </label>
+        <label>
+          Date:
+          <input
+            type="date"
+            value={date}
+            onChange={handleDateChange}
+          />
+        </label>
         <button type="submit">Add</button>
-        </form>
+      </form>
     </div>
-    );
+  );
 }
+
 export default AddTransaction;
