@@ -41,7 +41,7 @@ function App() {
         <h1 className="app-name">Welcome to view your progress!</h1>
         <Dashboard />
         <TransactionList expenses={expenses} />
-        <AddTransaction addTransaction={addTransaction} />
+        <AddTransaction AddNewTransaction={addTransaction} />
         <ExpenseLimit />
         <Report expenses={expenses} />
       </div>

@@ -27,6 +27,20 @@
       "amount": "67",
       "date": "2023-06-07",
       "id": "U2NosDJ"
+    },
+    {
+      "date": "2023-05-01",
+      "description": "green thig",
+      "category": "food",
+      "amount": "50",
+      "id": "Lwrkk6H"
+    },
+    {
+      "date": "2023-05-04",
+      "description": "maxfresh 65g",
+      "category": "refreshment",
+      "amount": "30",
+      "id": "WkCQ63R"
     }
   ]
 }

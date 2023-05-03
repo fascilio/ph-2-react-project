@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import SearchBar from "./SearchBar";
 
 function TransactionList() {
   const [expenses, setExpenses] = useState([]);
@@ -24,6 +25,7 @@ function TransactionList() {
   return (
     <div>
       <h2>Expense List</h2>
+      <SearchBar transactions={expenses} setTransactions={setExpenses} />
       <table>
         <thead>
           <tr>
