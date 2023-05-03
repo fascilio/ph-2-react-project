@@ -1,8 +1,8 @@
- import React, {useState} from "react";
+import React, {useState} from "react";
 
 function Dashboard() {
   
-  const [accountBalance, setAccountBalance] = useState(1000);
+  const [accountBalance, setAccountBalance] = useState(10000);
   const handleAddTransaction = (transaction) => {
     setAccountBalance((prevBalance) => prevBalance - transaction.amount);
   };
