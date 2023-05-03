@@ -1,25 +1,25 @@
 {
-    "expenses": [
-        {
-            "id":1,
-            "date": "20-12-2015",
-            "description": "paid to Bor Hardware",
-            "category": "building",
-            "amount": 2000
-        },
-        {
-          "id": "2",
-          "date": "2023-04-29",
-          "description": "Gasoline",
-          "category": "Transportation",
-          "amount": 35
-        },
-        {
-          "id": "3",
-          "date": "2023-04-28",
-          "description": "Restaurant",
-          "category": "Food",
-          "amount": 80
-        }
-    ]
+  "expenses": [
+    {
+      "id":1,
+      "date": "20-12-2015",
+      "description": "paid to Bor Hardware",
+      "category": "building",
+      "amount": 2000
+    },
+    {
+      "id": "2",
+      "date": "2023-04-29",
+      "description": "Gasoline",
+      "category": "Transportation",
+      "amount": 35
+    },
+    {
+      "id": "3",
+      "date": "2023-04-28",
+      "description": "Restaurant",
+      "category": "Food",
+      "amount": 80
+    }
+  ]
 }

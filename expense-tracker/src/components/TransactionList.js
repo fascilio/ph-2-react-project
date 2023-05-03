@@ -1,26 +1,11 @@
 import React from "react";
 
-// function TransactionList(props) {
-//   return (
-//     <div>
-//       <h2>Transactions</h2>
-//       {props.transactions && props.transactions.map((transaction) => (
-//         <div key={transaction.id}>
-//           <p>{transaction.date}</p>
-//           <p>{transaction.description}</p>
-//           <p>{transaction.category}</p>
-//           <p>{transaction.amount}</p>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// }
-
-function TransactionList(props) {
+function TransactionList({ expenses }) {
+  console.log(expenses);
   return (
     <div>
-      <h2>Transactions</h2>
-      {props.expenses && props.expenses.map((expense) => (
+      <h2>Expense List</h2>
+      {expenses && expenses.map((expense) => (
         <div key={expense.id}>
           <p>{expense.date}</p>
           <p>{expense.description}</p>
