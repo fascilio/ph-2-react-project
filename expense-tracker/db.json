@@ -1,7 +1,7 @@
 {
   "expenses": [
     {
-      "id":1,
+      "id": 1,
       "date": "20-12-2015",
       "description": "paid to Bor Hardware",
       "category": "building",

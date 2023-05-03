@@ -23,7 +23,7 @@ function App() {
         }
     };
     const addTransaction = (transaction) => {
-        try {
+        
           fetch("http://localhost:3002/expenses", {
             method: "POST",
             headers: {
@@ -31,17 +31,10 @@ function App() {
             },
             body: JSON.stringify(transaction),
           })
-            .then(response => {
-              if (!response.ok) {
-                throw new Error("Failed to add transaction");
-              }
-              return response.json();
-            })
+            .then(res => res.json())
             .then(data => setExpenses([...expenses, data]))
             .catch(error => console.error(error));
-        } catch (error) {
-          console.error(error);
-        }
+        
       };
     return (
       <div>

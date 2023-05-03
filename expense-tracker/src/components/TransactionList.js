@@ -1,37 +1,40 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 function TransactionList() {
   const [expenses, setExpenses] = useState([]);
 
   useEffect(() => {
-    fetchTransactions();
+    fetch("http://localhost:3002/expenses")
+      .then((res) => res.json())
+      .then((data) => setExpenses(data))
+      .catch((err) => console.log(err));
   }, []);
 
-  const fetchTransactions = () => {
-    try {
-      fetch("http://localhost:3002/expenses")
-        .then(response => response.json())
-        .then(data => setExpenses(data.expenses))
-        .catch(error => console.error(error));
-    } catch (error) {
-      console.error(error);
-    }
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3002/expenses/${id}`, { method: "DELETE" })
+      .then(() => {
+        // remove the deleted expense from the state
+        setExpenses((prevExpenses) =>
+          prevExpenses.filter((expense) => expense.id !== id)
+        );
+      })
+      .catch((err) => console.log(err));
   };
 
-  console.log(expenses);
   return (
-    <div>
+    <div className="expense-grid">
       <h2>Expense List</h2>
-      {expenses && expenses.map((expense) => (
-        <div key={expense.id}>
+      {expenses.map((expense) => (
+        <div key={expense.id} className="expense-item">
           <p>{expense.date}</p>
           <p>{expense.description}</p>
           <p>{expense.category}</p>
           <p>{expense.amount}</p>
+          <button onClick={() => handleDelete(expense.id)}>Delete</button>
         </div>
       ))}
     </div>
   );
 }
-  
+
 export default TransactionList;
