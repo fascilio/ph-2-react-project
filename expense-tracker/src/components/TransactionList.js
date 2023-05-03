@@ -1,6 +1,23 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
-function TransactionList({ expenses }) {
+function TransactionList() {
+  const [expenses, setExpenses] = useState([]);
+
+  useEffect(() => {
+    fetchTransactions();
+  }, []);
+
+  const fetchTransactions = () => {
+    try {
+      fetch("http://localhost:3002/expenses")
+        .then(response => response.json())
+        .then(data => setExpenses(data.expenses))
+        .catch(error => console.error(error));
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   console.log(expenses);
   return (
     <div>
