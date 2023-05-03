@@ -8,8 +8,9 @@ function Dashboard() {
   };
 
   return (
-    <div style={{textAlign: "center"}}>
+    <div style={{textAlign: "center", backgroundColor: "grey"}}>
       <h1>Dashboard</h1>
+      <h1 className="app-name">Welcome to view your progress!</h1>
       <p className="dashboard-container">Account Balance: {accountBalance}</p>
       
     </div>

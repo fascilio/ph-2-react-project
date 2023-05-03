@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navigation from "./Navigation";
 import Dashboard from "./Dashboard"
 import TransactionList from "./TransactionList";
 import AddTransaction from "./AddTransaction";
@@ -10,42 +12,47 @@ function App() {
 
     useEffect(() => {
         fetchTransactions();
-      }, []);
-    
-      const fetchTransactions = () => {
+    }, []);
+
+    const fetchTransactions = () => {
         try {
-          fetch("http://localhost:3002/expenses")
-            .then(response => response.json())
-            .then(data => setExpenses(data.expenses))
-            .catch(error => console.error(error));
+            fetch("http://localhost:3002/expenses")
+                .then(response => response.json())
+                .then(data => setExpenses(data.expenses))
+                .catch(error => console.error(error));
         } catch (error) {
-          console.error(error);
+            console.error(error);
         }
     };
+
     const addTransaction = (transaction) => {
-        
-          fetch("http://localhost:3002/expenses", {
+        fetch("http://localhost:3002/expenses", {
             method: "POST",
             headers: {
-              "Content-Type": "application/json",
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(transaction),
-          })
+        })
             .then(res => res.json())
             .then(data => setExpenses([...expenses, data]))
             .catch(error => console.error(error));
-        
-      };
+    };
+
     return (
-      <div>
-        <h1 className="app-name">Welcome to view your progress!</h1>
-        <Dashboard />
-        <TransactionList expenses={expenses} />
-        <AddTransaction AddNewTransaction={addTransaction} />
-        <ExpenseLimit />
-        <Report expenses={expenses} />
-      </div>
+        <Router>
+            <div>
+              <Navigation>
+                <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/transactions" element={<TransactionList />} />
+                    <Route path="/add-transaction" element={<AddTransaction />} />
+                    <Route path="/expense-limit" element={<ExpenseLimit />} />
+                    <Route path="/report" element={<Report />} />
+                </Routes>
+              </Navigation>  
+            </div>
+        </Router>
     );
-  }
-  
-  export default App;
+}
+
+export default App;

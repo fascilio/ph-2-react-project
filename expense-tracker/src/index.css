@@ -48,11 +48,12 @@ button {
   text-decoration: underline;
 }
 .dashboard-container {
-  background-color: rgb(113, 0, 128);
+  /* background-color: rgb(113, 0, 128); */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
+  
 }
 .app-name{
   text-align: center;
