@@ -40,8 +40,8 @@ The backend server is a simple Node.js server that uses the `json-server` librar
 
 The `db.json` file in the root directory of the project contains the data for the expenses.
 
-##  Link to the repository
-https://github.com/fascilio/ph-2-react-project
+##  Link to the repository components
+https://github.com/fascilio/ph-2-react-project/tree/main/expense-tracker/src/components
 
 ## Author
 Samuel Karanja
