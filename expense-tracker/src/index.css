@@ -83,3 +83,21 @@ button:hover {
   background-color: #f44336;
   opacity: 0.8;
 }
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.nav-links li {
+  background-color: rgb(94, 233, 14);
+  margin-right: 10px;
+  padding: 5px;
+}
+.nav-links li:hover{
+  background-color: #12cbd8;
+  opacity: 0.8;
+}
+.nav-links li:last-child {
+  margin-right: 0;
+}

@@ -4,7 +4,7 @@ function Navigation({ children }) {
   return (
     <div>
       <nav>
-        <ul>
+        <ul className="nav-links">
           <li>
             <Link to="/">Dashboard</Link>
           </li>

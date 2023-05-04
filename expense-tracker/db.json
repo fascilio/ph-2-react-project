@@ -113,18 +113,18 @@
       "amount": 2000
     },
     {
-      "id": "17",
+      "id": 17,
       "date": "2023-04-29",
-      "description": "Gasoline",
-      "category": "Transportation",
-      "amount": 3500
+      "description": "16 GB flash disk",
+      "category": "electronics",
+      "amount": "2500"
     },
     {
-      "id": "18",
+      "id": 18,
       "date": "2023-04-29",
-      "description": "Restaurant",
-      "category": "Food",
-      "amount": 80
+      "description": "Air pods",
+      "category": "Entertainment",
+      "amount": "2200"
     }
   ]
 }

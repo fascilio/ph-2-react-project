@@ -40,14 +40,14 @@ function App() {
 
     return (
         <Router>
-            <div>
+            <div style={{backgroundColor: "pink"}}>
               <Navigation>
                 <Routes>
                     <Route path="/" element={<Dashboard expenses={expenses} />} />
                     <Route path="/transactions" element={<TransactionList />} />
                     <Route path="/add-transaction" element={<AddTransaction addNewTransaction={addTransaction} />} />
                     <Route path="/expense-limit" element={<ExpenseLimit />} />
-                    <Route path="/report" element={<Report />} />
+                    <Route path="/report" element={<Report transactions={expenses} />} />
                 </Routes>
               </Navigation>  
             </div>

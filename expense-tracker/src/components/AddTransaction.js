@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function AddTransaction({ addNewTransaction }) {
   const [transaction, setTransaction] = useState({
-    date: '', description: '', category: '', amount: ''
+    id: null,
+    date: '',
+    description: '',
+    category: '',
+    amount: ''
   });
+
+  useEffect(() => {
+    axios.get('/api/transactions')
+      .then(response => {
+        const latestId = response.data[response.data.length - 1].id;
+        setTransaction(transaction => ({ ...transaction, id: latestId + 1 }));
+      })
+      .catch(error => console.log(error));
+  }, []);
 
   const handleChange = (e) => {
     setTransaction({ ...transaction, [e.target.name]: e.target.value });
@@ -12,11 +26,11 @@ function AddTransaction({ addNewTransaction }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     addNewTransaction(transaction);
-    setTransaction({ date: '', description: '',category: '', amount: '' });
+    setTransaction({ id: transaction.id + 1, date: '', description: '', category: '', amount: '' });
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'grey' }}>
       <h2>Add Transaction</h2>
       <form onSubmit={handleSubmit}>
         <label>Date:</label>
