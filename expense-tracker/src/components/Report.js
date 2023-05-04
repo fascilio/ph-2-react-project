@@ -35,7 +35,7 @@ function Report() {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'grey' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'green' }}>
       <h2>Report</h2>
       <p>Dear customer, welcome to a full report of your expenditure.</p>
       {message && <p>{message}</p>}

@@ -36,10 +36,10 @@ function App() {
             .then(data => setExpenses([...expenses, data]))
             .catch(error => console.error(error));
     };
-
+// style={{backgroundColor: "grey"}}
     return (
         <Router>
-            <div style={{backgroundColor: "grey"}}>
+            <div >
               <Navigation>
                 <Routes>
                     <Route path="/" element={<Dashboard expenses={expenses} />} />

@@ -30,7 +30,7 @@ function AddTransaction({ addNewTransaction }) {
   }
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'grey' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', backgroundColor: 'green' }}>
       <h2>Add Transaction</h2>
       <form onSubmit={handleSubmit}>
         <label>Date:</label>
