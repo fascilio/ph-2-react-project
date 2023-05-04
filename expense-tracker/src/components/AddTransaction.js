@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 function AddTransaction({ addNewTransaction }) {
   const [transaction, setTransaction] = useState({
@@ -11,9 +10,10 @@ function AddTransaction({ addNewTransaction }) {
   });
 
   useEffect(() => {
-    axios.get('/api/transactions')
-      .then(response => {
-        const latestId = response.data[response.data.length - 1].id;
+    fetch('/api/transactions')
+      .then(response => response.json())
+      .then(data => {
+        const latestId = data[data.length - 1].id;
         setTransaction(transaction => ({ ...transaction, id: latestId + 1 }));
       })
       .catch(error => console.log(error));

@@ -19,7 +19,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <div style={{ textAlign: "center", backgroundColor: "grey" }}>
+    <div style={{ textAlign: "center", backgroundColor: "grey", height: '100vh' }}>
       <h1>Dashboard</h1>
       <h1 className="app-name">Welcome to view your progress!</h1>
       <p className="dashboard-container">Total Expenses: {totalExpenses}</p>

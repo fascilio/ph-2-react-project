@@ -4,7 +4,6 @@ import Navigation from "./Navigation";
 import Dashboard from "./Dashboard"
 import TransactionList from "./TransactionList";
 import AddTransaction from "./AddTransaction";
-import ExpenseLimit from "./ExpenseLimit";
 import Report from "./Report";
 
 function App() {
@@ -40,13 +39,12 @@ function App() {
 
     return (
         <Router>
-            <div style={{backgroundColor: "pink"}}>
+            <div style={{backgroundColor: "grey"}}>
               <Navigation>
                 <Routes>
                     <Route path="/" element={<Dashboard expenses={expenses} />} />
                     <Route path="/transactions" element={<TransactionList />} />
                     <Route path="/add-transaction" element={<AddTransaction addNewTransaction={addTransaction} />} />
-                    <Route path="/expense-limit" element={<ExpenseLimit />} />
                     <Route path="/report" element={<Report transactions={expenses} />} />
                 </Routes>
               </Navigation>  

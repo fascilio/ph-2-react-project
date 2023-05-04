@@ -15,9 +15,6 @@ function Navigation({ children }) {
             <Link to="/add-transaction">Add Transaction</Link>
           </li>
           <li>
-            <Link to="/expense-limit">Expense Limit</Link>
-          </li>
-          <li>
             <Link to="/report">Report</Link>
           </li>
         </ul>
