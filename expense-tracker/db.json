@@ -2,45 +2,129 @@
   "expenses": [
     {
       "id": 1,
-      "date": "20-12-2015",
+      "date": "2023-04-13",
+      "description": "Groceries",
+      "category": "Food",
+      "amount": 80
+    },
+    {
+      "id": 2,
+      "date": "2023-04-14",
+      "description": "Gas",
+      "category": "Transportation",
+      "amount": 2000
+    },
+    {
+      "id": 3,
+      "date": "2023-04-15",
+      "description": "Movie tickets",
+      "category": "Entertainment",
+      "amount": 250
+    },
+    {
+      "id": 4,
+      "date": "2023-04-16",
+      "description": "Dinner",
+      "category": "Food",
+      "amount": 100
+    },
+    {
+      "id": 5,
+      "date": "2023-04-17",
+      "description": "Shopping",
+      "category": "Clothing",
+      "amount": 200
+    },
+    {
+      "id": 6,
+      "date": "2023-04-18",
+      "description": "Gift for friend's birthday",
+      "category": "Gifts",
+      "amount": 500
+    },
+    {
+      "id": 7,
+      "date": "2023-04-19",
+      "description": "water-bill",
+      "category": "Utilities",
+      "amount": 150
+    },
+    {
+      "id": 8,
+      "date": "2023-04-20",
+      "description": "Car wash",
+      "category": "Transportation",
+      "amount": 300
+    },
+    {
+      "id": 9,
+      "date": "2023-04-21",
+      "description": "Haircut",
+      "category": "Personal Care",
+      "amount": 300
+    },
+    {
+      "id": 10,
+      "date": "2023-04-22",
+      "description": "Lunch with coworkers",
+      "category": "Food",
+      "amount": 400
+    },
+    {
+      "id": 11,
+      "date": "2023-04-23",
+      "description": "Netflix subscription",
+      "category": "Entertainment",
+      "amount": 1500
+    },
+    {
+      "id": 12,
+      "date": "2023-04-24",
+      "description": "Gym membership",
+      "category": "Health",
+      "amount": 5000
+    },
+    {
+      "id": 13,
+      "date": "2023-04-25",
+      "description": "Dentist appointment",
+      "category": "Health",
+      "amount": 1500
+    },
+    {
+      "id": 14,
+      "date": "2023-04-26",
+      "description": "New shoes",
+      "category": "Clothing",
+      "amount": 2300
+    },
+    {
+      "id": 15,
+      "date": "2023-04-27",
+      "description": "Electricity bill",
+      "category": "Utilities",
+      "amount": 100
+    },
+    {
+      "id": 16,
+      "date": "2023-04-28",
       "description": "paid to Bor Hardware",
       "category": "building",
       "amount": 2000
     },
     {
-      "id": "2",
+      "id": "17",
       "date": "2023-04-29",
       "description": "Gasoline",
       "category": "Transportation",
-      "amount": 35
+      "amount": 3500
     },
     {
-      "id": "3",
-      "date": "2023-04-28",
+      "id": "18",
+      "date": "2023-04-29",
       "description": "Restaurant",
       "category": "Food",
       "amount": 80
-    },
-    {
-      "description": "meat for family",
-      "category": "food",
-      "amount": "67",
-      "date": "2023-06-07",
-      "id": "U2NosDJ"
-    },
-    {
-      "date": "2023-05-01",
-      "description": "green thig",
-      "category": "food",
-      "amount": "50",
-      "id": "Lwrkk6H"
-    },
-    {
-      "date": "2023-05-04",
-      "description": "maxfresh 65g",
-      "category": "refreshment",
-      "amount": "30",
-      "id": "WkCQ63R"
     }
   ]
 }

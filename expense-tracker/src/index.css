@@ -53,6 +53,7 @@ tr:nth-child(even) {
   justify-content: center;
   align-items: center;
   height: 50px;
+  font-size: 30px;
   
 }
 .app-name{

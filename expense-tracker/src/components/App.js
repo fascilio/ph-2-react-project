@@ -43,9 +43,9 @@ function App() {
             <div>
               <Navigation>
                 <Routes>
-                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/" element={<Dashboard expenses={expenses} />} />
                     <Route path="/transactions" element={<TransactionList />} />
-                    <Route path="/add-transaction" element={<AddTransaction />} />
+                    <Route path="/add-transaction" element={<AddTransaction addNewTransaction={addTransaction} />} />
                     <Route path="/expense-limit" element={<ExpenseLimit />} />
                     <Route path="/report" element={<Report />} />
                 </Routes>

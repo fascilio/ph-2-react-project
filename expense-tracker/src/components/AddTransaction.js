@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddTransaction({ AddNewTransaction }) {
+function AddTransaction({ addNewTransaction }) {
   const [transaction, setTransaction] = useState({
     date: '', description: '', category: '', amount: ''
   });
@@ -11,9 +11,10 @@ function AddTransaction({ AddNewTransaction }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    AddNewTransaction(transaction);
+    addNewTransaction(transaction);
     setTransaction({ date: '', description: '',category: '', amount: '' });
   }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h2>Add Transaction</h2>
@@ -26,12 +27,12 @@ function AddTransaction({ AddNewTransaction }) {
         <input type="text" name="category" value={transaction.category} onChange={handleChange} required style={{ backgroundColor: 'pink' }} />
         <label>Amount:</label>
         <input type="number" name="amount" value={transaction.amount} onChange={handleChange} required style={{ backgroundColor: 'pink' }} />
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <button type="submit">Add</button>
+        </div>
       </form>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <button type="submit" onClick={handleSubmit}>Add</button>
-      </div>
     </div>
   );
-
 }
+
 export default AddTransaction;

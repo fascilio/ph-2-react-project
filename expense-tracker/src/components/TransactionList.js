@@ -24,7 +24,7 @@ function TransactionList() {
 
   return (
     <div>
-      <h2>Expense List</h2>
+      <h2 style={{ textAlign: "center", backgroundColor: "grey", fontSize: "30px" }}>Expense List</h2>
       <SearchBar transactions={expenses} setTransactions={setExpenses} />
       <table>
         <thead>
